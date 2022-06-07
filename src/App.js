@@ -4,7 +4,6 @@ import logo from "./images/logo192.png"
 function App() {
   return (
     <div className="app">
-      <h1> hi we are making ig reeel</h1>
       <div className= "app--description">
         <img
         className="app--logo" 
