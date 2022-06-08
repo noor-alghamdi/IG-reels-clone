@@ -5,8 +5,7 @@ function App() {
   return (
     <div className="app">
       <div className="app--description">
-        <img className="app--logo" src={logo} />
-        <h1>Reels</h1>
+        
       </div>
       <div className="app--feed">
         <VideoCard />

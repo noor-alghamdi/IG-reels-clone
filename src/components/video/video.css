@@ -3,9 +3,25 @@
     width: 100%;
     height: 100%;
     scroll-snap-align: start;
+    z-index:0;
 }
 .video--player{
     object-fit: fill; /*maybe i'll delete this*/
     width: 100%;
     height: 100%;
+    position:relative;
+    z-index:0;
+    
+}
+
+.video--card > h1 {
+    position:absolute;
+    color: floralwhite;
+    z-index:3;
+    left: 40%;
+    top: 10px;
+    opacity: 0.5;
+    font-size: 24px;
+    
+    
 }
