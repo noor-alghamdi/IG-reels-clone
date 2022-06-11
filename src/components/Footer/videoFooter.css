@@ -1,0 +1,38 @@
+.video--footer {
+  position: relative;
+  margin-left: 20px;
+  bottom: 100px;
+}
+.footer--elements {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  color: white;
+  margin-bottom: 20px;
+}
+.footer--elements > h3 {
+  margin-left: 10px;
+  padding-bottom: 20px;
+}
+
+.footer--elements > h3 > button {
+  color: white;
+  font-weight: 900;
+  text-transform: inherit;
+}
+.video--ticker > .ticker {
+  width: 60%;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  height: fit-content;
+}
+.video--ticker h1 {
+  font-size: 12px;
+  color: white;
+  padding-top: 7px;
+}
+.music--icon {
+  position: absolute;
+  left: 5px;
+  color: white;
+}
