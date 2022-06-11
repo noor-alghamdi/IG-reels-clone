@@ -36,3 +36,16 @@
   left: 5px;
   color: white;
 }
+.video--actions {
+  display: flex;
+  position: absolute;
+  height: 95%;
+  color: white;
+  justify-content: space-evenly;
+  margin-left: 90%;
+}
+
+.video--actions--right > .MuiSvgIcon-root {
+  padding: 0 10px;
+  display: flex;
+}
