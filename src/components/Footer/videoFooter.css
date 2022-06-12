@@ -13,6 +13,7 @@
 .footer--elements > h3 {
   margin-left: 10px;
   padding-bottom: 20px;
+  font-size: 15px;
 }
 
 .footer--elements > h3 > button {
@@ -37,15 +38,33 @@
   color: white;
 }
 .video--actions {
-  display: flex;
   position: absolute;
-  height: 95%;
+  height: 100%;
   color: white;
-  justify-content: space-evenly;
-  margin-left: 90%;
+  margin-left: 86%;
+  flex-wrap: nowrap;
+  bottom: 140px;
+  padding-bottom: 15px;
 }
 
 .video--actions--right > .MuiSvgIcon-root {
-  padding: 0 10px;
   display: flex;
+  padding-bottom: 15px;
+  right: 0;
+}
+.video--stat {
+  right: 0;
+  flex-flow: column;
+  height: 100%;
+  padding-bottom: 15px;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  margin-top: 0;
+}
+
+.video--stat > p {
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-size: 10px;
+  text-align: center;
 }

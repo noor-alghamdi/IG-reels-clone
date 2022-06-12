@@ -29,8 +29,8 @@ function VideoFooter({ likes, shares, channel, avatarSrc, song }) {
       </div>
       <div className="video--actions">
         <div className="video--actions--right">
-          <SendIcon fontSize="large" />
-          <MoreHorizon fontSize="large" />
+          <SendIcon />
+          <MoreHorizon />
           <div className="video--stat">
             <FavoriteIcon />
             <p>{likes}</p>
