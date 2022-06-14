@@ -1,19 +1,30 @@
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import logo from "./images/logo192.png";
 import VideoCard from "./components/video/Video.js";
+import db from "./firebase.js";
+
 function App() {
+  const [reels, setReels] = useState([]);
+  useEffect(() => {
+    db.collection("reels").onSnapshot((snapshot) =>
+      setReels(snapshot.docs.map((doc) => doc.data()))
+    );
+  }, []);
   return (
     <div className="app">
       <div className="app--description"></div>
       <div className="app--feed">
-        <VideoCard
-          channel="noor-alghamdi"
-          avatarSrc="https://avatars.githubusercontent.com/u/65490460?v=4"
-          song="test song"
-          url="https://www.w3schools.com/html/movie.mp4"
-          likes={340}
-          shares={40}
-        />
+        {reels.map(({ channel, avatarStr, url, song, likes, shares }) => (
+          <VideoCard
+            channel={channel}
+            url={url}
+            song={song}
+            avatarSrc={avatarStr}
+            likes={likes}
+            shares={shares}
+          />
+        ))}
       </div>
     </div>
   );

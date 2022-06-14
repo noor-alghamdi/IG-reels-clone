@@ -8,23 +8,25 @@ import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import MoreHorizon from "@material-ui/icons/MoreHoriz";
 
-function VideoFooter({ likes, shares, channel, avatarSrc, song }) {
+function VideoFooter({ likes, shares, channel, avatarStr, song }) {
+  console.log("hi");
+
   return (
     <div className="video--footer">
       <div className="footer--elements">
-        <Avatar src={avatarSrc} />
+        <Avatar src={avatarStr} />
         <h3>
           {channel} <Button>Follow</Button>
         </h3>
       </div>
       <div className="video--ticker">
-        {/* <Ticker mode="smooth">
+        <Ticker mode="smooth">
           {({ index }) => (
             <>
               <h1>{song}</h1>
             </>
           )}
-        </Ticker> */}
+        </Ticker>
         <MusicNoteIcon className="music--icon" />
       </div>
       <div className="video--actions">

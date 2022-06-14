@@ -3,14 +3,16 @@ import "../video/video.css";
 import VideoHeader from "../Heder/VideoHeader.js";
 import VideoFooter from "../Footer/VideoFooter.js";
 
-function Video({ url, likes, shares, channel, avatarSrc, song }) {
+function Video({ url, likes, shares, channel, avatarStr, song }) {
   const videoRef = useRef(null);
+  console.log("noor");
 
   useEffect(() => {
     let options = {
       rootMargin: "0px",
       threshold: [0.25, 0.75],
     };
+    console.log("test");
 
     let handlePlay = (entries, observer) => {
       entries.forEach((entry) => {
@@ -21,28 +23,23 @@ function Video({ url, likes, shares, channel, avatarSrc, song }) {
         }
       });
     };
+    console.log("this");
 
     let observer = new IntersectionObserver(handlePlay, options);
 
     observer.observe(videoRef.current);
+    console.log("app");
   });
 
   return (
     <div className="video--card">
       <VideoHeader />
-      <video
-        ref={videoRef}
-        controls
-        className="video--player"
-        src={url}
-        type="video/mp4"
-        // loop
-      />
+      <video ref={videoRef} src={url} type="video/mp4" loop={true} />
       <VideoFooter
         likes={likes}
         shares={shares}
         channel={channel}
-        avatarSrc={avatarSrc}
+        avatarStr={avatarStr}
         song={song}
       />
     </div>
