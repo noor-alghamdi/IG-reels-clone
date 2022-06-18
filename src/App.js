@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
 import "./App.css";
-import logo from "./images/logo192.png";
+import db from "./firebase";
+import React, { useState, useEffect } from "react";
 import VideoCard from "./components/video/Video.js";
-import db from "./firebase.js";
-
 function App() {
   const [reels, setReels] = useState([]);
   useEffect(() => {
@@ -15,10 +13,10 @@ function App() {
     <div className="app">
       <div className="app--description"></div>
       <div className="app--feed">
-        {reels.map(({ channel, avatarStr, url, song, likes, shares }) => (
+        {reels.map(({ channel, avatarStr, media, song, likes, shares }) => (
           <VideoCard
             channel={channel}
-            url={url}
+            url={media}
             song={song}
             avatarSrc={avatarStr}
             likes={likes}
